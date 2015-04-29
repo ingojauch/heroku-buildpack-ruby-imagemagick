@@ -24,6 +24,10 @@ system <<-SH
   # ## Build Time
   #
 
+  cd /home/vcap/app
+  npm install bower -g
+  rake bower:install['--allow-root --config.interactive=false']
+  
   # Switch to the repo's context.
   cd $BUILD_DIR;
 
